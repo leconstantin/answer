@@ -17,9 +17,9 @@ import { DeleteAlertDialog } from "./DeleteAlertDialog";
 export default function Post() {
   return (
     <Card className="overflow-hidden ring-secondary hover:ring-2 ease-in-out  cursor-pointer">
-      <CardHeader className="flex-1 min-w-0">
+      <CardHeader>
         <div className="flex items-center justify-between">
-          <div className="flex w-full items-center gap-2 overflow-hidden rounded-md  text-left text-sm outline-none">
+          <div className="flex w-full items-center gap-2 overflow-hidden rounded-md  text-left text-sm">
             <Avatar className="h-8 w-8 rounded-lg">
               <AvatarImage
                 src="/avatars/shadcn.jpg"
@@ -50,7 +50,7 @@ export default function Post() {
       <Separator />
       <CardContent className="p-4 sm:p-6">
         <div className="space-y-4">
-          <p className="text-base text-card-foreground line-clamp-2">
+          <p className="">
             Our platform is your go-to place for asking questions and getting
             reliable answers from a vibrant community of experts and
             enthusiasts. Whether you&apos;re stuck on a coding problem, curious
@@ -61,7 +61,7 @@ export default function Post() {
             <Image
               src="/posts/bbb.jpg"
               alt="Post content"
-              className="h-auto w-full rounded object-cover" //md:w-[590px]
+              className="h-auto w-fit  rounded object-cover" //md:w-[590px]
               width={594.667}
               height={333.271}
               priority
@@ -167,11 +167,11 @@ export function PostTwo() {
           <h2 className="text-base text-card-foreground line-clamp-2">
             Is this JavaScript code for a simple calculator correct?
           </h2>
-          <div className="w-full max-w-4xl rounded-lg shadow-md p-2">
+          {/* <div className="overflow-scroll p-2">
             <pre>
               <code>{calculatorCode}</code>
             </pre>
-          </div>
+          </div> */}
 
           {/* Bottom section: Post actions */}
           {/* Like and Comment buttons */}
